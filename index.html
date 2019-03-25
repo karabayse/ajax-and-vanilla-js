@@ -5,6 +5,15 @@
     <title>AJAX and Vanilla JavaScript</title>
   </head>
   <body>
+    <button id="button">Get Text File</button>
 
+    <script>
+      // Create Event Listener
+      document.getElementById('button').addEventListener('click', loadText);
+
+      function loadText() {
+        console.log('in loadText: button clicked');
+      }
+    </script>
   </body>
 </html>
