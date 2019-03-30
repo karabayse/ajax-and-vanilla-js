@@ -19,6 +19,11 @@
         console.log(xhr);
         xhr.open('GET', 'sample.txt', true);
 
+        // Used for loaders (optional)
+        xhr.onprogress = function() {
+          console.log('READYSTATE: ', xhr.readyState);
+        }
+
         xhr.onload = function() {
           // Check for status of response
           // 200: OK
@@ -28,7 +33,7 @@
             console.log(this.responseText);
           }
         }
-        // Sends request 
+        // Sends request
         xhr.send();
       }
     </script>
