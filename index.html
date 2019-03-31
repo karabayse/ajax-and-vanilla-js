@@ -33,6 +33,10 @@
             console.log(this.responseText);
           }
         }
+
+        xhronerror = function() {
+          console.log('Request Error');
+        }
         // Sends request
         xhr.send();
       }
