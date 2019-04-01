@@ -6,40 +6,12 @@
   </head>
   <body>
     <button id="button">Get Text File</button>
+    <br>
+    <br>
+    <div id="text">
 
-    <script>
-      // Create Event Listener
-      document.getElementById('button').addEventListener('click', loadText);
+    </div>
 
-      function loadText() {
-        console.log('in loadText: button clicked');
-        // Create XHR Object
-        let xhr = new XMLHttpRequest();
-        // OPEN function: type, url/file, async (true or false)
-        console.log(xhr);
-        xhr.open('GET', 'sample.txt', true);
-
-        // Used for loaders (optional)
-        xhr.onprogress = function() {
-          console.log('READYSTATE: ', xhr.readyState);
-        }
-
-        xhr.onload = function() {
-          // Check for status of response
-          // 200: OK
-          // 403: Forbidden
-          // 404: Not Found
-          if(this.status == 200) {
-            console.log(this.responseText);
-          }
-        }
-
-        xhronerror = function() {
-          console.log('Request Error');
-        }
-        // Sends request
-        xhr.send();
-      }
-    </script>
+    <script src="xhr.js" charset="utf-8"></script>
   </body>
 </html>
