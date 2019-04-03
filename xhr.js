@@ -22,6 +22,8 @@ function loadText() {
     if(this.status == 200) {
       console.log(this.responseText);
       document.getElementById('text').innerHTML = this.responseText;
+    } else if(this.status = 404) {
+      document.getElementById('text').innerHTML = 'Not Found';
     }
   }
 
